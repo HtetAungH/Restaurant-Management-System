@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Restaurant Management System</h1>
+
+        <!-- Table Section -->
+        <h2>Tables</h2>
+        <div class="tables">
+            <button onclick="selectTable(1)">Table 1</button>
+            <button onclick="selectTable(2)">Table 2</button>
+            <button onclick="selectTable(3)">Table 3</button>
+        </div>
+
+        <!-- Order Section -->
+        <h2>Menu</h2>
+        <div class="menu">
+            <button onclick="addOrder('Burger', 5)">Burger - $5</button>
+            <button onclick="addOrder('Pizza', 8)">Pizza - $8</button>
+            <button onclick="addOrder('Pasta', 7)">Pasta - $7</button>
+        </div>
+
+        <!-- Bill Section -->
+        <h2>Current Order</h2>
+        <div id="orderDetails"></div>
+        <h3>Total: $<span id="total">0</span></h3>
+        <button onclick="placeOrder()">Place Order</button>
+        <button onclick="clearOrder()">Clear Order</button>
+
+        <!-- Notification for Order Success -->
+        <p id="notification" class="hidden">Order placed successfully!</p>
+
+        <!-- Total Customers -->
+        <h2>Total Customers Served: <span id="customerCount">0</span></h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
